@@ -1,3 +1,5 @@
+import profile from "../../assets/profile.png";
+
 const form = {
   Profile_Picture: {
     dataKey: "Profile_Picture",
@@ -6,14 +8,14 @@ const form = {
     description:
       "Adding a photo to your CV can be a great way to personalize your application and make a positive first impression. When uploading your photo, make sure it is a clear and recent headshot that shows your face in a professional manner. When taking your photo, dress professionally and consider the background and lighting. A neutral background and good lighting can help to highlight your features and present you in the best possible light. Remember, your photo is an important part of your CV, so take the time to choose a high-quality image that represents you in a professional and approachable manner. When you're done, the next step is to start filling your application with your personal information, good luck!",
     addButton: null,
-    formInputs: [
+    formInputs_1: [
       {
         type: "file",
         name: "picture",
         id: "pictureInput",
         label: "Upload picture*",
         placeholder: null,
-        value: "",
+        value: profile,
       },
     ],
   },
@@ -24,7 +26,7 @@ const form = {
     description:
       "This is a critical part of your CV as it gives the potential employer a glimpse of who you are. This is an opportunity for you to introduce yourself, highlight your skills, and provide a brief summary of your career goals.",
     addButton: null,
-    formInputs: [
+    formInputs_1: [
       {
         type: "text",
         name: "fullName",
@@ -85,57 +87,6 @@ const form = {
     addButton: {
       label: "Add more education",
     },
-    formInputs: [
-      {
-        type: "text",
-        name: "schoolName",
-        id: "schoolInput",
-        label: "School*",
-        placeholder: "Enter your school or institution",
-        value: "",
-      },
-      {
-        type: "text",
-        name: "schoolDegree",
-        id: "degreeInput",
-        label: "Degree or Qualification*",
-        placeholder: "Enter your degree or qualification",
-        value: "",
-      },
-      {
-        type: "month",
-        name: "schoolStart",
-        id: "startSchoolInput",
-        label: "Start Date*",
-        placeholder: null,
-        value: "",
-      },
-      {
-        type: "month",
-        name: "schoolEnd",
-        id: "endSchoolInput",
-        label: "End Date*",
-        placeholder: null,
-        value: "",
-      },
-      {
-        type: "text",
-        name: "schoolLocation",
-        id: "schoolLocationInput",
-        label: "Location*",
-        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
-        value: "",
-      },
-      {
-        type: "textarea",
-        name: "schoolDescription",
-        id: "schoolTextarea",
-        label: "School Overview",
-        placeholder:
-          "Briefly outline any notable achievements or describe your school experience.",
-        value: "",
-      },
-    ],
   },
   Work_Experience: {
     dataKey: "Work_Experience",
@@ -146,57 +97,6 @@ const form = {
     addButton: {
       label: "Add more experience",
     },
-    formInputs: [
-      {
-        type: "text",
-        name: "companyName",
-        id: "companyInput",
-        label: "Company Name",
-        placeholder: "Enter your company name",
-        value: "",
-      },
-      {
-        type: "text",
-        name: "position",
-        id: "positionInput",
-        label: "Position",
-        placeholder: "Enter your position",
-        value: "",
-      },
-      {
-        type: "month",
-        name: "startWork",
-        id: "startWorkInput",
-        label: "Start Date",
-        placeholder: null,
-        value: "",
-      },
-      {
-        type: "month",
-        name: "endWork",
-        id: "endWorkInput",
-        label: "End Date",
-        placeholder: null,
-        value: "",
-      },
-      {
-        type: "text",
-        name: "workLocation",
-        id: "workLocationInput",
-        label: "Location",
-        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
-        value: "",
-      },
-      {
-        type: "textarea",
-        name: "jobDescription",
-        id: "jobTextarea",
-        label: "Job Description",
-        placeholder:
-          "Describe responsibilities and tasks you performed in your the roles. Highlight achievements, projects, and any significant contributions. Provide specific examples to demonstrate your skills and abilities.",
-        value: "",
-      },
-    ],
   },
   Skills: {
     dataKey: "Skills",
@@ -207,16 +107,6 @@ const form = {
     addButton: {
       label: "Add skill",
     },
-    formInputs: [
-      {
-        type: "text",
-        name: "skill",
-        id: "skillInput",
-        label: "Skill",
-        placeholder: null,
-        value: "",
-      },
-    ],
   },
   Languages: {
     dataKey: "Languages",
@@ -227,16 +117,6 @@ const form = {
     addButton: {
       label: "Add skill",
     },
-    formInputs: [
-      {
-        type: "text",
-        name: "language",
-        id: "languageInput",
-        label: "Language (e.g.. English - Fluent / Intermediate / Basic)",
-        placeholder: null,
-        value: "",
-      },
-    ],
   },
 };
 
