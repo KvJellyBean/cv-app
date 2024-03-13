@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function GeneralInformation({ data }) {
   let fullName, profession, address, phone, email;
 
-  data.formInputs.forEach((input) => {
+  data.formInputs_1.forEach((input) => {
     switch (input.name) {
       case "fullName":
         fullName = input.value;
