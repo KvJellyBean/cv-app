@@ -1,0 +1,578 @@
+import profile from "../../assets/sample.jpg";
+
+const form = {
+  Profile_Picture: {
+    dataKey: "Profile_Picture",
+    legend: "Profile Picture",
+    image: true,
+    description:
+      "Adding a photo to your CV can be a great way to personalize your application and make a positive first impression. When uploading your photo, make sure it is a clear and recent headshot that shows your face in a professional manner. When taking your photo, dress professionally and consider the background and lighting. A neutral background and good lighting can help to highlight your features and present you in the best possible light. Remember, your photo is an important part of your CV, so take the time to choose a high-quality image that represents you in a professional and approachable manner. When you're done, the next step is to start filling your application with your personal information, good luck!",
+    addButton: null,
+    formInputs_1: [
+      {
+        type: "file",
+        name: "picture",
+        id: "pictureInput",
+        label: "Upload picture*",
+        placeholder: null,
+        value: profile,
+      },
+    ],
+  },
+  General_Information: {
+    dataKey: "General_Information",
+    legend: "General Information",
+    image: null,
+    description:
+      "This is a critical part of your CV as it gives the potential employer a glimpse of who you are. This is an opportunity for you to introduce yourself, highlight your skills, and provide a brief summary of your career goals.",
+    addButton: null,
+    formInputs_1: [
+      {
+        type: "text",
+        name: "fullName",
+        id: "fullNameInput",
+        label: "Full Name*",
+        placeholder: "Enter your full name",
+        value: "Elon Reeve Musk",
+      },
+      {
+        type: "text",
+        name: "profession",
+        id: "professionInput",
+        label: "Profession*",
+        placeholder: "Enter your profession (e.g. Full Stack Developer)",
+        value: "CEO and Chief Engineer of SpaceX & Tesla",
+      },
+      {
+        type: "text",
+        name: "address",
+        id: "addressInput",
+        label: "Address*",
+        placeholder: "Enter your address",
+        value: "1 Rocket Road, Hawthorne, CA 90250, USA",
+      },
+      {
+        type: "tel",
+        name: "phone",
+        id: "phoneInput",
+        label: "Phone*",
+        placeholder: "Enter your phone number (e.g. +1 123 456 7890)",
+        value: "(555) 555-5555",
+      },
+      {
+        type: "email",
+        name: "email",
+        id: "emailInput",
+        label: "Email*",
+        placeholder: "Enter your email (e.g. example@gmail.com)",
+        value: "elonmusk@mail.com",
+      },
+      {
+        type: "textarea",
+        name: "profileSummary",
+        id: "profileTextarea",
+        label: "Profile Summary*",
+        placeholder:
+          "Briefly introduce yourself and highlight your key skills and experiences relevant to the position. Show how your background aligns with the company's needs and objectives.",
+        value:
+          "A visionary and experienced technology leader with a proven track record of building successful companies in various industries. Passionate about advancing technology and solving global problems. Proven ability to lead high-performing teams and achieve ambitious goals.",
+      },
+    ],
+  },
+  Education: {
+    dataKey: "Education",
+    legend: "Education",
+    image: null,
+    description:
+      "The education demonstrates your commitment to learning and your willingness to acquire new skills. If you have multiple degrees, list them in reverse chronological order, with the most recent degree listed first and if you don't have any formal education, consider including any relevant certifications or training you may have received.",
+    addButton: {
+      label: "Add more education",
+    },
+    formInputs_1: [
+      {
+        type: "text",
+        name: "schoolName",
+        id: "schoolInput",
+        label: "School*",
+        placeholder: "Enter your school or institution",
+        value: "Pretoria Boys High School",
+      },
+      {
+        type: "text",
+        name: "schoolDegree",
+        id: "degreeInput",
+        label: "Degree or Qualification*",
+        placeholder: "Enter your degree or qualification",
+        value: "High School",
+      },
+      {
+        type: "month",
+        name: "schoolStart",
+        id: "startSchoolInput",
+        label: "Start Date*",
+        placeholder: null,
+        value: "1989-01",
+      },
+      {
+        type: "month",
+        name: "schoolEnd",
+        id: "endSchoolInput",
+        label: "End Date*",
+        placeholder: null,
+        value: "1992-01",
+      },
+      {
+        type: "text",
+        name: "schoolLocation",
+        id: "schoolLocationInput",
+        label: "Location*",
+        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
+        value: "Pretoria, South Africa",
+      },
+      {
+        type: "textarea",
+        name: "schoolDescription",
+        id: "schoolTextarea",
+        label: "School Overview",
+        placeholder:
+          "Briefly outline any notable achievements or describe your school experience.",
+        value:
+          "During my time at Pretoria Boys High School, I was a dedicated student and an active member of the school community. I was the captain of the debate and chess teams, and I graduated with top honors. I also won the South African Physics Olympiad in 1992.",
+      },
+    ],
+    formInputs_2: [
+      {
+        type: "text",
+        name: "schoolName",
+        id: "schoolInput",
+        label: "School*",
+        placeholder: "Enter your school or institution",
+        value: "University of Pennsylvania",
+      },
+      {
+        type: "text",
+        name: "schoolDegree",
+        id: "degreeInput",
+        label: "Degree or Qualification*",
+        placeholder: "Enter your degree or qualification",
+        value: "Bachelor of Science in Economics (BS)",
+      },
+      {
+        type: "month",
+        name: "schoolStart",
+        id: "startSchoolInput",
+        label: "Start Date*",
+        placeholder: null,
+        value: "1992-02",
+      },
+      {
+        type: "month",
+        name: "schoolEnd",
+        id: "endSchoolInput",
+        label: "End Date*",
+        placeholder: null,
+        value: "1995-02",
+      },
+      {
+        type: "text",
+        name: "schoolLocation",
+        id: "schoolLocationInput",
+        label: "Location*",
+        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
+        value: "Philadelphia, USA",
+      },
+      {
+        type: "textarea",
+        name: "schoolDescription",
+        id: "schoolTextarea",
+        label: "School Overview",
+        placeholder:
+          "Briefly outline any notable achievements or describe your school experience.",
+        value:
+          "While attending the University of Pennsylvania, I received a full-ride scholarship and was involved in several extracurricular activities. I founded the physics club and the young entrepreneurs club, and I graduated with summa cum laude honors.",
+      },
+    ],
+    formInputs_3: [
+      {
+        type: "text",
+        name: "schoolName",
+        id: "schoolInput",
+        label: "School*",
+        placeholder: "Enter your school or institution",
+        value: "Stanford University",
+      },
+      {
+        type: "text",
+        name: "schoolDegree",
+        id: "degreeInput",
+        label: "Degree or Qualification*",
+        placeholder: "Enter your degree or qualification",
+        value: "Ph.D. in Physics",
+      },
+      {
+        type: "month",
+        name: "schoolStart",
+        id: "startSchoolInput",
+        label: "Start Date*",
+        placeholder: null,
+        value: "1995-03",
+      },
+      {
+        type: "month",
+        name: "schoolEnd",
+        id: "endSchoolInput",
+        label: "End Date*",
+        placeholder: null,
+        value: "1997-03",
+      },
+      {
+        type: "text",
+        name: "schoolLocation",
+        id: "schoolLocationInput",
+        label: "Location*",
+        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
+        value: "Stanford, USA",
+      },
+      {
+        type: "textarea",
+        name: "schoolDescription",
+        id: "schoolTextarea",
+        label: "School Overview",
+        placeholder:
+          "Briefly outline any notable achievements or describe your school experience.",
+        value:
+          "I received a Ph.D. scholarship from Stanford University and conducted research in particle physics. However, I decided to leave the Ph.D. program to pursue a career in technology.",
+      },
+    ],
+  },
+  Work_Experience: {
+    dataKey: "Work_Experience",
+    legend: "Work Experience",
+    image: null,
+    description:
+      "Showcase your professional accomplishments and demonstrate your ability to contribute to an organization. In addition to the basics, you should also include a brief description of your duties and accomplishments while in the role. This can help potential employers understand the scope of your responsibilities and the impact of it.",
+    addButton: {
+      label: "Add more experience",
+    },
+    formInputs_1: [
+      {
+        type: "text",
+        name: "companyName",
+        id: "companyInput",
+        label: "Company Name",
+        placeholder: "Enter your company name",
+        value: "Zip2",
+      },
+      {
+        type: "text",
+        name: "position",
+        id: "positionInput",
+        label: "Position",
+        placeholder: "Enter your position",
+        value: "Co-founder and CEO",
+      },
+      {
+        type: "month",
+        name: "startWork",
+        id: "startWorkInput",
+        label: "Start Date",
+        placeholder: null,
+        value: "1995-04",
+      },
+      {
+        type: "month",
+        name: "endWork",
+        id: "endWorkInput",
+        label: "End Date",
+        placeholder: null,
+        value: "1999-04",
+      },
+      {
+        type: "text",
+        name: "workLocation",
+        id: "workLocationInput",
+        label: "Location",
+        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
+        value: "California, USA",
+      },
+      {
+        type: "textarea",
+        name: "jobDescription",
+        id: "jobTextarea",
+        label: "Job Description",
+        placeholder:
+          "Describe responsibilities and tasks you performed in your the roles. Highlight achievements, projects, and any significant contributions. Provide specific examples to demonstrate your skills and abilities.",
+        value:
+          "Co-founded and led Zip2, a city guide software company, focusing on online content and navigation, which was acquired by Compaq Computers.",
+      },
+    ],
+    formInputs_2: [
+      {
+        type: "text",
+        name: "companyName",
+        id: "companyInput",
+        label: "Company Name",
+        placeholder: "Enter your company name",
+        value: "Paypal",
+      },
+      {
+        type: "text",
+        name: "position",
+        id: "positionInput",
+        label: "Position",
+        placeholder: "Enter your position",
+        value: "Co-founder and CEO",
+      },
+      {
+        type: "month",
+        name: "startWork",
+        id: "startWorkInput",
+        label: "Start Date",
+        placeholder: null,
+        value: "1999-05",
+      },
+      {
+        type: "month",
+        name: "endWork",
+        id: "endWorkInput",
+        label: "End Date",
+        placeholder: null,
+        value: "2002-05",
+      },
+      {
+        type: "text",
+        name: "workLocation",
+        id: "workLocationInput",
+        label: "Location",
+        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
+        value: "California, USA",
+      },
+      {
+        type: "textarea",
+        name: "jobDescription",
+        id: "jobTextarea",
+        label: "Job Description",
+        placeholder:
+          "Describe responsibilities and tasks you performed in your the roles. Highlight achievements, projects, and any significant contributions. Provide specific examples to demonstrate your skills and abilities.",
+        value:
+          "Co-founded and led X.com, an online financial services company that pioneered online payment solutions, later merging with Confinity to become PayPal and facilitating secure online money transfers.",
+      },
+    ],
+    formInputs_3: [
+      {
+        type: "text",
+        name: "companyName",
+        id: "companyInput",
+        label: "Company Name",
+        placeholder: "Enter your company name",
+        value: "SpaceX",
+      },
+      {
+        type: "text",
+        name: "position",
+        id: "positionInput",
+        label: "Position",
+        placeholder: "Enter your position",
+        value: "CEO and Chief Engineer",
+      },
+      {
+        type: "month",
+        name: "startWork",
+        id: "startWorkInput",
+        label: "Start Date",
+        placeholder: null,
+        value: "2002-06",
+      },
+      {
+        type: "month",
+        name: "endWork",
+        id: "endWorkInput",
+        label: "End Date",
+        placeholder: null,
+        value: "2024-05",
+      },
+      {
+        type: "text",
+        name: "workLocation",
+        id: "workLocationInput",
+        label: "Location",
+        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
+        value: "California, USA",
+      },
+      {
+        type: "textarea",
+        name: "jobDescription",
+        id: "jobTextarea",
+        label: "Job Description",
+        placeholder:
+          "Describe responsibilities and tasks you performed in your the roles. Highlight achievements, projects, and any significant contributions. Provide specific examples to demonstrate your skills and abilities.",
+        value:
+          "Founded, leads, and engineers SpaceX, a space exploration company that designs, manufactures, and launches rockets and spacecraft, pioneering reusable launch vehicles and aiming for Mars colonization.",
+      },
+    ],
+    formInputs_4: [
+      {
+        type: "text",
+        name: "companyName",
+        id: "companyInput",
+        label: "Company Name",
+        placeholder: "Enter your company name",
+        value: "Tesla",
+      },
+      {
+        type: "text",
+        name: "position",
+        id: "positionInput",
+        label: "Position",
+        placeholder: "Enter your position",
+        value: "CEO and Chief Engineer",
+      },
+      {
+        type: "month",
+        name: "startWork",
+        id: "startWorkInput",
+        label: "Start Date",
+        placeholder: null,
+        value: "2003-07",
+      },
+      {
+        type: "month",
+        name: "endWork",
+        id: "endWorkInput",
+        label: "End Date",
+        placeholder: null,
+        value: "2024-05",
+      },
+      {
+        type: "text",
+        name: "workLocation",
+        id: "workLocationInput",
+        label: "Location",
+        placeholder: "Enter your school location (e.g. Tokyo, Japan)",
+        value: "Texas, USA",
+      },
+      {
+        type: "textarea",
+        name: "jobDescription",
+        id: "jobTextarea",
+        label: "Job Description",
+        placeholder:
+          "Describe responsibilities and tasks you performed in your the roles. Highlight achievements, projects, and any significant contributions. Provide specific examples to demonstrate your skills and abilities.",
+        value:
+          "Joined and leads Tesla as CEO and product architect, driving the company's electric vehicle revolution by designing and manufacturing electric cars, solar panels, and battery storage systems for sustainable transportation and clean energy.",
+      },
+    ],
+  },
+  Skills: {
+    dataKey: "Skills",
+    legend: "Skills",
+    image: null,
+    description:
+      "Here is an opportunity to showcase your relevant abilities and qualifications for the job. Be specific about your skills and match them with the requirements of the job you're applying for. Include technical skills, communication skills, and problem-solving abilities.",
+    addButton: {
+      label: "Add skill",
+    },
+    formInputs_1: [
+      {
+        type: "text",
+        name: "skill",
+        id: "skillInput",
+        label: "Skill",
+        placeholder: null,
+        value: "Coding",
+      },
+    ],
+    formInputs_2: [
+      {
+        type: "text",
+        name: "skill",
+        id: "skillInput",
+        label: "Skill",
+        placeholder: null,
+        value: "Web Development",
+      },
+    ],
+    formInputs_3: [
+      {
+        type: "text",
+        name: "skill",
+        id: "skillInput",
+        label: "Skill",
+        placeholder: null,
+        value: "Leadership",
+      },
+    ],
+    formInputs_4: [
+      {
+        type: "text",
+        name: "skill",
+        id: "skillInput",
+        label: "Skill",
+        placeholder: null,
+        value: "Management",
+      },
+    ],
+    formInputs_5: [
+      {
+        type: "text",
+        name: "skill",
+        id: "skillInput",
+        label: "Skill",
+        placeholder: null,
+        value: "Public Speaking",
+      },
+    ],
+  },
+  Languages: {
+    dataKey: "Languages",
+    legend: "Languages",
+    image: null,
+    description:
+      "By listing the languages you know and your proficiency level in each, you can demonstrate your ability to communicate effectively with people from different cultures and increase your appeal to potential employers.",
+    addButton: {
+      label: "Add skill",
+    },
+    formInputs_1: [
+      {
+        type: "text",
+        name: "language",
+        id: "languageInput",
+        label: "Language (e.g.. English - Fluent / Intermediate / Basic)",
+        placeholder: null,
+        value: "English - Fluent",
+      },
+    ],
+    formInputs_2: [
+      {
+        type: "text",
+        name: "language",
+        id: "languageInput",
+        label: "Language (e.g.. English - Fluent / Intermediate / Basic)",
+        placeholder: null,
+        value: "Afrikaans - Fluent",
+      },
+    ],
+    formInputs_3: [
+      {
+        type: "text",
+        name: "language",
+        id: "languageInput",
+        label: "Language (e.g.. English - Fluent / Intermediate / Basic)",
+        placeholder: null,
+        value: "Spainish - Intermediate",
+      },
+    ],
+    formInputs_4: [
+      {
+        type: "text",
+        name: "language",
+        id: "languageInput",
+        label: "Language (e.g.. English - Fluent / Intermediate / Basic)",
+        placeholder: null,
+        value: "Japanese - Basic",
+      },
+    ],
+  },
+};
+
+export default form;
