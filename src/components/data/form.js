@@ -115,7 +115,7 @@ const form = {
     description:
       "By listing the languages you know and your proficiency level in each, you can demonstrate your ability to communicate effectively with people from different cultures and increase your appeal to potential employers.",
     addButton: {
-      label: "Add skill",
+      label: "Add language",
     },
   },
 };
