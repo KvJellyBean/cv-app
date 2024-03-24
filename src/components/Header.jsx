@@ -1,5 +1,7 @@
 import Button from "./Button";
 import PropTypes from "prop-types";
+import Logo from "/logo.png";
+import "../styles/Header.css";
 
 function Header({ events }) {
   const navigation = ["Edit CV", "Preview CV", "Sample CV"];
@@ -7,6 +9,7 @@ function Header({ events }) {
   return (
     <header>
       <div className="logoContainer">
+        <img src={Logo} alt="Curriculify Logo" />
         <h1>Curriculify</h1>
       </div>
 
