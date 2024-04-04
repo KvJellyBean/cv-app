@@ -1,68 +1,102 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --text: #04060b;
+  --text-shade: #0e1425;
+  --background: #f6f5ff;
+  --primary: #143aa3;
+  --secondary: #e9f4fc;
+  --secondary-shade: #cae6f7;
+  --accent: #3f8fe4;
+  --danger: #bb2124;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button.fillButton,
+input::-webkit-file-upload-button {
+  padding: 0.7rem 1rem;
+  background: var(--primary);
+  color: var(--background);
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+button.fillButton:hover,
+input::-webkit-file-upload-button:hover {
+  filter: brightness(1.3);
+}
+
+button.emptyButton {
+  background: none;
+  border: none;
+}
+
+button.emptyButton:hover {
+  color: var(--primary);
+}
+
+button.outlinedButton {
+  background: none;
+  border: 2px solid var(--primary);
+  border-radius: 0.25rem;
+  color: var(--primary);
+}
+
+button.outlinedButton:hover {
+  color: var(--background);
+  background: var(--primary);
+}
+
+::selection {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), var(--secondary-shade));
 }
