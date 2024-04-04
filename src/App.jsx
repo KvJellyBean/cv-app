@@ -3,6 +3,7 @@ import MainPage from "./components/MainPage";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import formData from "./components/data/form";
+import fakeData from "./components/data/fakedata";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -17,7 +18,8 @@ function App() {
       }
     },
     showSample: () => {
-      alert("Sample Copied");
+      alert("Sample CV Copied");
+      setData(fakeData);
     },
     changeData: (value) => {
       setData(value);
