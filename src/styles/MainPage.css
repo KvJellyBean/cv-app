@@ -1,0 +1,658 @@
+input,
+textarea {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: var(--secondary-shade);
+  border: 1px solid var(--accent);
+  width: 100%;
+  font-family: inherit;
+  resize: vertical;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+
+  & form {
+    padding: 2rem;
+
+    & legend {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      text-align: justify;
+      color: var(--text-shade);
+    }
+  }
+
+  & form.form:nth-child(1) {
+    background-color: var(--secondary);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+    .pictureContainer {
+      border-radius: 50%;
+      border: 0.2rem solid var(--accent);
+      box-shadow: 0 0 0 0.2rem var(--secondary), 0 0 0 0.4rem var(--primary);
+      display: flex;
+      transition: 0.3s ease;
+
+      & img.profile-pic {
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+        object-fit: cover;
+        background-position: center;
+      }
+    }
+
+    .pictureContainer:hover {
+      transform: scale(1.1);
+    }
+    .formProfile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .formBody {
+        gap: 0;
+        padding: 0;
+        border-radius: 0;
+
+        .inputWrapper {
+          grid-column: 1/5;
+        }
+
+        & label {
+          visibility: hidden;
+          display: none;
+        }
+
+        & input::-webkit-file-upload-button {
+          margin-right: 0.75rem;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+
+  & form.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .formHeader {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: repeat(3, auto);
+      align-items: center;
+      column-gap: 4rem;
+      padding-inline: 2rem;
+
+      & legend {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        min-width: 15rem;
+      }
+
+      .description {
+        grid-column: 2/3;
+        grid-row: 1/3;
+      }
+    }
+
+    .formHeader:has(button) {
+      & legend {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        min-width: 15rem;
+      }
+
+      & button {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+    }
+
+    .formBody {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, auto);
+      padding: 2rem;
+      gap: 1rem;
+
+      background-color: var(--secondary);
+      border-radius: 1rem;
+
+      .inputWrapper:nth-child(1),
+      .inputWrapper:nth-child(4) {
+        grid-column: 1/3;
+      }
+
+      .inputWrapper:nth-child(2),
+      .inputWrapper:nth-child(5) {
+        grid-column: 3/5;
+      }
+
+      .inputWrapper:nth-child(3) {
+        grid-column: 1/5;
+      }
+
+      .inputWrapper:nth-child(6) {
+        grid-column: 1/5;
+      }
+
+      & button {
+        grid-column: 4/5;
+        background-color: var(--danger);
+        color: white;
+        font-weight: bold;
+        border: 2px solid var(--danger);
+        border-radius: 0.2rem;
+      }
+
+      & button:hover {
+        background-color: var(--secondary);
+        color: var(--danger);
+        border: 2px solid var(--danger);
+      }
+    }
+  }
+
+  & form.form:nth-child(3),
+  form.form:nth-child(4) {
+    .formBody {
+      .inputWrapper:nth-child(3) {
+        grid-column: 1/3;
+      }
+      .inputWrapper:nth-child(4) {
+        grid-column: 3/5;
+      }
+
+      .inputWrapper:nth-child(5) {
+        grid-column: 1/5;
+      }
+    }
+  }
+
+  & form.form:nth-child(5),
+  form.form:nth-child(6) {
+    gap: 0.5rem;
+
+    .formHeader {
+      margin-bottom: 1.5rem;
+    }
+    .formBody {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+
+      & button {
+        padding-top: -1rem;
+      }
+    }
+  }
+}
+
+/* CV Main */
+main {
+  align-items: center;
+
+  & h3.subtitle {
+    text-transform: uppercase;
+  }
+
+  #cvPage {
+    max-width: 900px;
+    min-width: 900px;
+    min-height: 900px;
+    box-shadow: 0 0 1px var(--text);
+    display: flex;
+
+    #sideCV,
+    #mainCV {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+    }
+
+    #sideCV {
+      order: 1;
+      flex: 1 1 30%;
+      gap: 3rem;
+      background-color: #2e2e2e;
+      color: var(--background);
+
+      .profilePicture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 11rem;
+        overflow: hidden;
+        border-radius: 50%;
+
+        & img {
+          width: 13rem;
+          height: 10rem;
+          object-fit: cover;
+        }
+      }
+
+      .profileSummary,
+      .shortForm {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .shortForm {
+        & p {
+          margin-top: -0.25rem;
+        }
+
+        & p:nth-child(3) {
+          margin-top: 0.25rem;
+        }
+      }
+    }
+
+    #mainCV {
+      order: 2;
+      flex: 1 1 70%;
+      display: flex;
+      gap: 2.5rem;
+
+      .generalInformation {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .personalInfo {
+          .fullName {
+            font-size: 2.25rem;
+          }
+        }
+
+        .personalInfo:nth-child(2) {
+          display: grid;
+          column-gap: 1rem;
+          grid-template-columns: 1.3fr 1.75fr;
+          grid-template-rows: repeat(2, auto);
+          align-items: center;
+
+          .textInput:nth-child(2) {
+            order: 1;
+          }
+
+          .textInput:nth-child(3) {
+            order: 3;
+          }
+          .textInput:nth-child(1) {
+            order: 2;
+            grid-row: 1/3;
+            grid-column: 2/3;
+          }
+        }
+      }
+
+      .longForm {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: relative;
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            background: grey;
+            position: absolute;
+            left: 40%;
+            top: 5px;
+            height: calc(100% - 10px);
+          }
+
+          & li {
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: 0.75fr 1fr;
+
+            position: relative;
+            margin-bottom: 1rem;
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 0.75rem;
+              height: 0.75rem;
+              border: 1px solid black;
+              background-color: white;
+              position: absolute;
+              left: 39%;
+              top: 5px;
+              border-radius: 10px;
+            }
+
+            .listSubtitle:nth-child(2) {
+              grid-column: 1/2;
+              grid-row: 2/3;
+              order: 1;
+            }
+            .listSubtitle:nth-child(3) {
+              grid-column: 1/2;
+              grid-row: 3/4;
+              order: 1;
+            }
+            .listSubtitle:nth-child(4) {
+              grid-column: 2/3;
+              grid-row: 1/2;
+              font-weight: 600;
+              order: 4;
+            }
+
+            .listDescription:nth-child(5) {
+              grid-column: 2/3;
+              grid-row: 2/5;
+              color: var(--text);
+              filter: contrast(0.5);
+              order: 5;
+            }
+          }
+        }
+      }
+
+      .shortForm {
+        display: grid;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+
+        & ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          & li {
+            list-style: circle;
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+    gap: 3rem;
+
+    & form.form:nth-child(1) {
+      flex-direction: column;
+    }
+
+    & form.form {
+      padding: 2rem;
+
+      .formHeader {
+        padding-inline: 1rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* CV Preview */
+    #cvPage {
+      max-width: fit-content;
+      min-width: fit-content;
+      font-size: 0.85rem;
+
+      #sideCV,
+      #mainCV {
+        padding: 1rem;
+      }
+
+      #sideCV {
+        font-size: 0.7rem;
+        .profilePicture {
+          width: 7rem;
+
+          & img {
+            width: 7rem;
+            height: 7rem;
+          }
+        }
+      }
+
+      #mainCV {
+        .generalInformation {
+          .personalInfo {
+            font-size: 0.7rem;
+            .fullName {
+              font-size: 1.25rem;
+            }
+          }
+        }
+
+        .longForm {
+          .list {
+            & li {
+              .listSubtitle:nth-child(3),
+              .listSubtitle:nth-child(4) {
+                font-size: 0.7rem;
+              }
+              .listDescription:nth-child(5) {
+                font-size: 0.7rem;
+              }
+            }
+          }
+        }
+
+        .shortForm {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  input,
+  textarea {
+    font-size: 0.85rem;
+  }
+  main {
+    padding: 1rem;
+
+    & form {
+      & legend {
+        font-size: 1.25rem;
+      }
+
+      .description {
+        font-size: 0.85rem;
+      }
+    }
+
+    & form.form:nth-child(1) {
+      .pictureContainer {
+        & img.profile-pic {
+          width: 9rem;
+          height: 9rem;
+        }
+      }
+
+      .formProfile {
+        .formBody {
+          & input::-webkit-file-upload-button {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    & form.form {
+      padding: 0;
+      .formHeader {
+        padding-inline: 0;
+      }
+
+      .formBody {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    & form.form:nth-child(5),
+    form.form:nth-child(6) {
+      .formBody {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    & form.form:nth-child(1) {
+      padding: 1rem;
+
+      & legend {
+        text-align: center;
+      }
+
+      .pictureContainer {
+        margin-top: 1rem;
+        & img.profile-pic {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+    }
+
+    #cvPage {
+      #mainCV {
+        font-size: 0.5rem;
+
+        .generalInformation {
+          .personalInfo {
+            .fullName {
+              font-size: 0.8rem;
+            }
+          }
+
+          .personalInfo:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.5rem;
+          }
+        }
+
+        .longForm {
+          & ul.list {
+            &:before {
+              content: "";
+              width: 0;
+              left: 0;
+            }
+
+            & li {
+              column-gap: 0.5rem;
+              &:before {
+                width: 0;
+                border: none;
+                background-color: transparent;
+              }
+
+              .listSubtitle:nth-child(3) {
+                font-size: 0.5rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      #sideCV {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  main {
+    padding: 0.5rem;
+
+    #cvPage {
+      #mainCV {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+
+        .generalInformation {
+          .personalInfo {
+            .fullName {
+              font-size: 0.8rem;
+            }
+          }
+
+          .personalInfo:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.5rem;
+          }
+        }
+
+        .longForm {
+          & ul.list {
+            &:before {
+              content: "";
+              width: 0;
+              left: 0;
+            }
+
+            & li {
+              column-gap: 0.5rem;
+              &:before {
+                width: 0;
+                border: none;
+                background-color: transparent;
+              }
+
+              .listSubtitle:nth-child(3) {
+                font-size: 0.5rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      #sideCV {
+        font-size: 0.5rem;
+
+        .profilePicture {
+          width: 3rem;
+
+          & img {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
