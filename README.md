@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/KvJellyBean/cv-app">
-    <img src="./src/images/logoBanner.jpeg" alt="Logo Banner">
+    <img src="./src/assets/logoBanner.jpeg" alt="Logo Banner">
   </a>
 
 <h3 align="center">Curriculify</h3>
@@ -94,8 +94,16 @@ Quickly set up a local copy by following these simple steps for a seamless start
 
 ## Roadmap
 
-- [x] Create Task (to-do list) logic
-  - [x] Add, edit and delete task
+- [x] Editor Page
+  - [x] Allow to modify existing sections for the CV data
+  - [x] Enable the functionality to include additional form sections as required
+  - [x] Provide the capability to remove sections as needed
+- [x] Preview Page
+  - [x] Present the CV output in a visually appealing manner.
+  - [x] Enable to download CVs as PDF files
+  - [ ] Enhance the PDF generation process with improved styling
+- [x] Provide CV Sample
+- [ ] Allow users to save last CVs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,4 +125,4 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-gif]: ./src/images/cvapp.gif
+[product-gif]: ./src/assets/cvapp.gif
