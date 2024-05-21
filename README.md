@@ -12,7 +12,7 @@
   <p align="center">
     a responsive website that simplifies the creation of professional curriculum vitae, offering intuitive tools and customizable templates for effortless CV building.
     <br />
-    <a href="https://kvjellybean.github.io/cv-app/">View Demo</a>
+    <a href="https://cv-application-kvjellybean.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/KvJellyBean/cv-app/issues">Report Bug</a>
 </div>
